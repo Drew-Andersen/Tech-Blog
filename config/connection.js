@@ -1,6 +1,9 @@
+// Imort sequelize
 const Sequelize = require('sequelize');
+// Import dotenv
 require('dotenv').config();
 
+// Allows for enviornmental variables to be used
 const sequelize = process.env.DB_URL
   ? new Sequelize(process.env.DB_URL)
   : new Sequelize(
@@ -13,4 +16,5 @@ const sequelize = process.env.DB_URL
     }
   );
 
+  // Export sequelize
 module.exports = sequelize;
