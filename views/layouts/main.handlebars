@@ -17,10 +17,10 @@
 </head>
 
 <body>
-    <header class="navbar">
+    <header class="navBar">
         <nav>
             {{!-- If user is loggedIn --}}
-            {{#if loggedIn}}
+            {{#if logged_in}}
                 <a href="/">Home</a>
                 <a href="/dashboard">Dashboard</a>
                 <button id="logout" class="no-button">Logout</button>
@@ -32,11 +32,15 @@
             {{/if}}
         </nav>
     </header>
+
+    <h1 class="text-center">Tech Blog</h1>
+
     <main>
         {{!-- Renders the HTML --}}
         {{{body}}}
     </main>
-    {{#if loggedIn}}
+
+    {{#if logged_in}}
         <script src="../../public/js/logout.js"></script>
     {{/if}}
 </body>

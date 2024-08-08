@@ -1,22 +1,22 @@
 {{!-- Create a post --}}
 <div class="container">
     <div class="row">
-        <div class="col-md-10">
+        <div class="col-md-10 mx-auto text-left">
             {{!-- Create BlogPost form --}}
             <form class="createBlogPost">
                 {{!-- Title --}}
-                <div class="">
+                <div class="mt-5 mb-3">
                     <label class="form-label">Title</label>
-                    <input type="text" id="titleInput" class="form-control" maxlength="40" />
+                    <input id="titleInput" class="form-control" maxlength="40" />
                 </div>
                 {{!-- Body --}}
-                <div class="">
+                <div class="mb-3">
                     <label class="form-label">Body</label>
                     <textarea id="bodyInput" class="form-control" rows="10"></textarea>
                 </div>
                 {{!-- Submit button --}}
                 <div class="text-center">
-                    <button type="submit" class="text-center btn btn-dark btn-long btn-block">Submit</button>
+                    <button type="submit" class="text-center mt-3 btn btn-dark btn-lg btn-block">Submit</button>
                 </div>
             </form>
         </div>

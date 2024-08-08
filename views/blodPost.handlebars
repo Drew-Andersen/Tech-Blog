@@ -1,8 +1,8 @@
 {{!-- Blog Post Page --}}
 <div class="container">
     <div class="row">
-        <div class="card shadow blogPost-main">
-            <div class="text-center">
+        <div class="card shadow text-dark mb-3 blogPost-main">
+            <div class="text-center mx-auto p-3">
                 <h2>{{title}}</h2>
                 <p>Created by: {{user.name}} on {{format_date date_created}}</p>
                 <p>{{description}}</p>
@@ -11,9 +11,9 @@
             </div>
             <div class="text-center">
                 <h3>Comments</h3>
-                {{#each comments as |coment| }}
+                {{#each comments as |coment|}}
                 <div>
-                    <p>{{comment.comment_body}} by {{user.name}} on {{format_date date_created}}</p>
+                    <p>{{comment.comment_body}} by {{comment.user.name}} on {{format_date date_created}}</p>
                 </div>
                 {{/each}}
             </div>
@@ -23,4 +23,6 @@
 
 {{> comment-form}}
 
-<script src=""></script>
+<script src="../public/js/newCommentHandler.js"></script>
+<script src="../public/js/deleteBlogPost.js"></script>
+<script src="../public/js/editBlogPost"></script>
