@@ -2,7 +2,7 @@
 const sequelize = require("../config/connection");
 const { User, BlogPost, Comment } = require('../models');
 
-// REquire the json files
+// Require the json files
 const userData = require('./userData.json');
 const commentData = require('./commentData.json');
 const blogPostData = require('./blogPostData.json');
@@ -25,7 +25,7 @@ const seedDatabase = async () => {
 
     const comments = await Comment.bulkCreate(commentData);
 
-    process.exit();
+    process.exit(0);
 }
 
 // Seed the database
