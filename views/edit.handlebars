@@ -1,0 +1,25 @@
+{{!-- Edit the blog post page --}}
+<div class="container">
+    <div class="row">  
+        <div class="col-md-10 text-left">
+            <form id="submitEdit" class="createBlogPost">
+                {{!-- Title --}}
+                <div class="mt-5 mb-3">
+                    <label class="form-label">Title</label>
+                    <input id="titleInput" class="form-control" maxlength="40" value="{{title}}" />
+                </div>
+                {{!-- Body --}}
+                <div class="mb-3">
+                    <label class="form-control">Body</label>
+                    <textarea id="bodyInput" class="form-control" rows="3">{{description}}</textarea>
+                </div>
+                {{!-- Submit Button --}}
+                <div class="text-center">
+                    <button type="submit" class="text-center btn btn-dark btn-long">Submit</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+
+<script src="../public/js/submitNewEdit.js"></script>

@@ -1,0 +1,14 @@
+{{!-- Renders the dashboard elements --}}
+<div class="container">
+    <div class="row">
+        <div class="card shadow">
+            <div class="text-center">
+                <h2><a href="/blogPost'{{id}}">{{title}}</a></h2>
+                <p>Created by {{user.name}} on {{format_date date_created}}</p>
+                <p>{{description}}</p>
+                <button id="editBtn" class="btn btn-dark" data-id="{{id}}">Edit</button>
+                <button id="deleteBtn" class="btn btn-dark" data-id="{{id}}">Delete</button>
+            </div>
+        </div>
+    </div>
+</div>
