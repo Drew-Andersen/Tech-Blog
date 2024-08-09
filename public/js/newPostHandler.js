@@ -27,6 +27,4 @@ async function newPostHandler (e) {
 }
 
 // Event Listener
-document
-    .querySelector('.createBlogPost')
-    .addEventListener("submit", newPostHandler);
+document.querySelector('.createBlogPost').addEventListener("submit", newPostHandler);
