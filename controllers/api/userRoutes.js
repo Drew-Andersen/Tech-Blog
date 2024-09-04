@@ -1,6 +1,5 @@
 // Imports
 const router = require('express').Router();
-const { stat } = require('fs');
 const { User } = require('../../models');
 
 // Post route for new user
@@ -42,7 +41,7 @@ router.post('/login', async (req, res) => {
             req.session.user_id = userData.id;
             req.session.logged_in = true;
 
-            res.json({user: euserData, message:`You are now logged in!`});
+            res.json({user: userData, message:`You are now logged in!`});
         })
     } catch (err) {
         res.status(500).json(err);
